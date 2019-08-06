@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+    become: true
+    tasks:
+    - name: Install base packages
+        apt:
+            state: present
+            update_cache: yes
+            upgrade: yes
+            pkg:
+                - tree
+                - lolcat

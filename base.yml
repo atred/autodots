@@ -3,9 +3,10 @@
   become: true
   tasks:
   - name: Install base packages
-    apt:
-      state: present
-      update_cache: yes
-      pkg:
+    pacman:
+      name:
       - tree
       - lolcat
+      state: present
+      update_cache: yes
+      upgrade: yes

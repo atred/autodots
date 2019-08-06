@@ -1,1 +1,1 @@
-ansible-playbook t480.yml -i hosts
+ansible-playbook t480.yml

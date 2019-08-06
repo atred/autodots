@@ -1,0 +1,23 @@
+#
+# wm independent hotkeys
+#
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# program execution
+super + space ; {b,f,m,i,t,n}
+	{firefox,firefox,st -e ncmpcpp,idea,thunar,thunar}
+
+# Volume, backlight, and media
+XF86AudioMute
+	pamixer -t
+XF86Audio{Raise,Lower}Volume
+	pamixer -{i,d} 5
+XF86MonBrightness{Up,Down}
+	xbacklight -{inc,dec} 10
+super + {F1,F2,F3}
+        mpc {toggle,prev,next}
+super + shift + {F2,F3}
+    	mpc volume {-,+}5

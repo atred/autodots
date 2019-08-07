@@ -7,17 +7,6 @@
     update_cache: yes
   register: installation
 
-- name: Check existing .zshrc
-  stat: path="{{dotfiles_user_home}}/.zshrc"
-  when: installation is success
-  register: zshrc_stat
-
-- name: Backup .zshrc
-  command: mv ~/.zshrc ~/.zshrc.bak
-  args:
-    creates: "{{dotfiles_user_home}}/.zshrc.bak"
-  when: zshrc_stat.stat.exists
-
 - name: Cloning oh-my-zsh
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh
@@ -26,14 +15,17 @@
   register: cloning
 
 - name: Build new .zshrc
-  copy:
-    src: "{{dotfiles_user_home}}/.oh-my-zsh/templates/zshrc.zsh-template"
+  file:
+    src: "{{dotfiles_home}}/roles/zsh/files/zshrc"
     dest: "{{dotfiles_user_home}}/.zshrc"
+    state: link
+    force: yes
   when: cloning is success
+  register: building
 
 - name: Change user shell
   become: yes
   user:
     name: andrew
     shell: /bin/zsh
-  when: cloning is success
+  when: building is success

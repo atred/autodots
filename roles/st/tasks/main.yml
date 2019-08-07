@@ -1,5 +1,5 @@
 ---
-- name: Install graphical packages
+- name: Install st dependency packages
   become: yes
   pacman: 
     name:
@@ -9,5 +9,30 @@
      - ncurses
     state: latest
     update_cache: yes
+  register: installation
 
 - name: Clone repo
+  git:
+    repo: https://github.com/atred/st
+    dest: "{{dev_home}}/st"
+  register: cloning
+  when: installation is success
+
+- name: Build st
+  make:
+    chdir: "{{dev_home}}/st"
+  register: building
+  when: cloning.changed
+
+- name: Install st
+  become: yes
+  make:
+    chdir: "{{dev_home}}/st"
+    target: install
+  when: building.changed
+
+- name: Clean st directory
+  make:
+    chdir: "{{dev_home}}/st"
+    target: clean
+  when: cloning.changed

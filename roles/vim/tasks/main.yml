@@ -5,6 +5,8 @@
     dest: "{{ dotfiles_user_home }}/.vimrc"
     state: link
     force: yes
+  register: vimrc
 
 - name: Run :PlugInstall
-  command: vim +PlugInstall +qall
+  command: vim +'PlugInstall --sync' +qa
+  when: vimrc.changed

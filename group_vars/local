@@ -2,9 +2,9 @@
 
 # Base dirs
 dotfiles_user_home: "{{ '~' | expanduser }}"
-dotfiles_home: "{{dotfiles_user_home}}/dotfiles"
-dev_home: "{{dotfiles_user_home/dev"
-src_home: "{{dotfiles_user_home/src"
+dotfiles_home: "{{dotfiles_user_home}}/dots"
+dev_home: "{{dotfiles_user_home}}/dev"
+src_home: "{{dotfiles_user_home}}/src"
 
 # Username
 user_name: andrew
@@ -18,6 +18,7 @@ git_email: atredinbo@gmail.com
 base_package_list:
   # Basic widgets
   - tree
+  - htop
   - bc
   - dosfstools
   - exfat-utils
@@ -29,6 +30,7 @@ base_package_list:
   - atool
   - git
   - vim
+  - neofetch
   # Audio/Music
   - pulseaudio
   - pulsemixer

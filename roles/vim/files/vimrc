@@ -62,7 +62,7 @@ set wrap
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 " Colors
-colorscheme wombat256mod
-let g:lightline = { 'colorscheme': 'wombat', }
+silent! colorscheme wombat256mod
+silent! let g:lightline = { 'colorscheme': 'wombat', }
 set laststatus=2
 set noshowmode

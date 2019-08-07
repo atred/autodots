@@ -1,0 +1,10 @@
+---
+- name: Link vimrc
+  file:
+    src: "{{ dotfiles_home }}/roles/vim/files/vimrc"
+    dest: "{{ dotfiles_user_home }}/.vimrc"
+    state: link
+    force: yes
+
+- name: Run :PlugInstall
+  command: vim +PlugInstall +qall

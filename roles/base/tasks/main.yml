@@ -1,0 +1,11 @@
+---
+- name: Install base packages
+  pacman: 
+    name: "{{base_package_list}}"
+    state: latest
+    update_cache: yes
+
+- name: Update git config
+  template:
+    src: "gitconfig.j2"
+    dest: "{{dotfiles_user_home}}/.gitconfig"

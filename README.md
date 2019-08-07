@@ -3,5 +3,8 @@ My automatic [suckless](https://suckless.org) Arch Linux configuration managed w
 
 ![alt text](https://raw.githubusercontent.com/atred/autodots/master/logo.png "bad joke, nothing to see here")
 
-# Install
+## Install
 Instructions coming soon...
+
+## Credits
+[sloria's dotfiles](https://github.com/sloria/dotfiles) were an incredibly helpful resource for writing my own.

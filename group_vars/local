@@ -1,0 +1,48 @@
+# vi: set ft=yaml :
+
+# Base dirs
+dotfiles_user_home: "{{ '~' | expanduser }}"
+dotfiles_home: "{{dotfiles_user_home}}/dotfiles"
+
+# Git config
+full_name: Andrew Redinbo
+git_user: atred
+git_email: atredinbo@gmail.com
+
+# Basic pacman packages
+base_package_list:
+  # Basic widgets
+  - tree
+  - bc
+  - dosfstools
+  - exfat-utils
+  - networkmanager
+  - ntfs-3g
+  - unrar
+  - unzip
+  - fzf
+  - atool
+  - git
+  - vim
+  # Audio/Music
+  - pulseaudio
+  - pulsemixer
+  - mpd
+  - mpc
+  - ncmpcpp
+
+# Graphical pacman packages
+graphic_package_list:
+ - xorg-server
+ - xorg-xinit
+ - noto-fonts
+ - firefox
+ - sxhkd
+ - pavucontrol
+ - scrot
+ - unclutter
+ - zathura
+ - zathura-djvu
+ - zathura-pdf-mupdf
+ - fzf
+ - xorg-xbacklight

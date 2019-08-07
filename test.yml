@@ -5,3 +5,5 @@
   - {role: zsh, tags: ['t480', 'x220']}
   - {role: vim, tags: ['t480', 'x220']}
   - {role: st, tags: ['t480', 'x220']}
+  - {role: slstatus, tags: ['t480', 'x220']}
+

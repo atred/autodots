@@ -5,3 +5,44 @@
     name: "{{graphical_package_list}}"
     state: latest
     update_cache: yes
+  register: installation
+
+- name: Clone repo
+  git:
+    repo: https://github.com/atred/dwm
+    dest: "{{dev_home}}/dwm"
+  register: cloning
+  when: installation is success
+
+- name: Build dwm
+  make:
+    chdir: "{{dev_home}}/st"
+  register: building
+  when: cloning.changed
+
+- name: Install dwm
+  become: yes
+  make:
+    chdir: "{{dev_home}}/st"
+    target: install
+  when: building.changed
+
+- name: Clean dwm directory
+  make:
+    chdir: "{{dev_home}}/st"
+    target: clean
+  when: cloning.changed
+
+- name: Configure sxhkd
+  file:
+    src: "{{role_path}}/files/config/sxhkd/sxhkdrc"
+    dest: "{{dotfiles_user_home}}/.config/sxhkd/sxhkdrc"
+    state: link
+    force: yes
+
+- name: Link xinitrc
+  file:
+    src: "{{role_path}}/files/xinitrc"
+    dest: "{{dotfiles_user_home}}/.xinitrc"
+    state: link
+    force: yes

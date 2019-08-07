@@ -1,5 +1,8 @@
 # vi: set ft=yaml :
 
+# Number of batteries in device (1 or 2)
+bat_num: "1"
+
 # Base dirs
 dotfiles_user_home: "{{ '~' | expanduser }}"
 dotfiles_home: "{{dotfiles_user_home}}/dots"
@@ -29,8 +32,10 @@ base_package_list:
   - fzf
   - atool
   - git
+  - xdg-user-dirs
   - vim
   - neofetch
+  - ufw
   # Audio/Music
   - pulseaudio
   - pulsemixer
@@ -53,3 +58,8 @@ graphic_package_list:
  - zathura-pdf-mupdf
  - fzf
  - xorg-xbacklight
+ - dmenu
+ - freetype2
+ - libx11
+ - libxft
+ - libxinerama

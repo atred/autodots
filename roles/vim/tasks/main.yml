@@ -1,7 +1,7 @@
 ---
 - name: Link vimrc
   file:
-    src: "{{ dotfiles_home }}/roles/vim/files/vimrc"
+    src: "{{ role_path }}/files/vimrc"
     dest: "{{ dotfiles_user_home }}/.vimrc"
     state: link
     force: yes

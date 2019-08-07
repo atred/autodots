@@ -1,0 +1,7 @@
+slstatus &
+unclutter &
+sxhkd &
+setxkbmap -option caps:escape
+xrdb .Xresources
+xset b off
+exec dwm

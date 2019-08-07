@@ -10,3 +10,31 @@
   template:
     src: "gitconfig.j2"
     dest: "{{dotfiles_user_home}}/.gitconfig"
+
+- name: Configure user dirs
+  file:
+    src: "{{ dotfiles_home }}/roles/base/files/config/user-dirs.dirs"
+    dest: "{{ dotfiles_user_home }}/.config/user-dirs.dirs"
+    state: link
+    force: yes
+  register: userdirs
+
+- name: Create user directories
+  file:
+    path: "{{dotfiles_user_home}}/{{item}}"
+    state: directory
+  with_items:
+    - "dev"
+    - "src"
+    - "dl"
+    - "doc"
+    - "mus"
+    - "pic"
+    - "pres"
+    - "repo"
+    - "tmp"
+    - "vid"
+
+- name: Update user-dirs
+  command: xdg-user-dirs-update
+  when: userdirs.changed

@@ -6,5 +6,14 @@ My automatic [suckless](https://suckless.org) Arch Linux configuration managed w
 ## Install
 Instructions coming soon...
 
+## TODO
+ - ufw
+ - screen tearing
+ - mononoki
+ - firefox
+ - fix vim on tty
+ - better zsh
+ - mpd
+
 ## Credits
 [sloria's dotfiles](https://github.com/sloria/dotfiles) were an incredibly helpful resource for writing my own.

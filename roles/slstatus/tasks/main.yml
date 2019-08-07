@@ -1,0 +1,26 @@
+---
+- name: Clone repo
+  git:
+    repo: https://github.com/atred/slstatus
+    dest: "{{dev_home}}/slstatus"
+    version: "{{bat_num}}"
+  register: cloning
+
+- name: Build slstatus
+  make:
+    chdir: "{{dev_home}}/st"
+  register: building
+  when: cloning.changed
+
+- name: Install slstatus
+  become: yes
+  make:
+    chdir: "{{dev_home}}/st"
+    target: install
+  when: building.changed
+
+- name: Clean slstatus directory
+  make:
+    chdir: "{{dev_home}}/st"
+    target: clean
+  when: cloning.changed

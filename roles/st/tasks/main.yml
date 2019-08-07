@@ -1,0 +1,13 @@
+---
+- name: Install graphical packages
+  become: yes
+  pacman: 
+    name:
+     - libxext
+     - libxft
+     - xorg-fonts-misc
+     - ncurses
+    state: latest
+    update_cache: yes
+
+- name: Clone repo

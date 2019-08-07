@@ -3,6 +3,11 @@
 # Base dirs
 dotfiles_user_home: "{{ '~' | expanduser }}"
 dotfiles_home: "{{dotfiles_user_home}}/dotfiles"
+dev_home: "{{dotfiles_user_home/dev"
+src_home: "{{dotfiles_user_home/src"
+
+# Username
+user_name: andrew
 
 # Git config
 full_name: Andrew Redinbo

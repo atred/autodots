@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
-  become: true
   roles:
   - {role: base, tags: ['t480', 'x220']}
+  - {role: zsh, tags: ['t480', 'x220']}

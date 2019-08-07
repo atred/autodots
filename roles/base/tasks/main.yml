@@ -1,5 +1,6 @@
 ---
 - name: Install base packages
+  become: yes
   pacman: 
     name: "{{base_package_list}}"
     state: latest

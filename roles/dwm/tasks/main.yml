@@ -1,0 +1,7 @@
+---
+- name: Install graphical packages
+  become: yes
+  pacman: 
+    name: "{{graphical_package_list}}"
+    state: latest
+    update_cache: yes

@@ -7,6 +7,7 @@ My automatic [suckless](https://suckless.org) Arch Linux configuration managed w
 Instructions coming soon...
 
 ## TODO
+ - fix vim
  - ufw
  - volume and backlight
  - screen tearing

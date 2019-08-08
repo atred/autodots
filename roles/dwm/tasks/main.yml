@@ -2,7 +2,7 @@
 - name: Install graphical packages
   become: yes
   pacman: 
-    name: "{{graphical_package_list}}"
+    name: "{{graphic_package_list}}"
     state: latest
     update_cache: yes
   register: installation
@@ -16,22 +16,27 @@
 
 - name: Build dwm
   make:
-    chdir: "{{dev_home}}/st"
+    chdir: "{{dev_home}}/dwm"
   register: building
   when: cloning.changed
 
 - name: Install dwm
   become: yes
   make:
-    chdir: "{{dev_home}}/st"
+    chdir: "{{dev_home}}/dwm"
     target: install
   when: building.changed
 
 - name: Clean dwm directory
   make:
-    chdir: "{{dev_home}}/st"
+    chdir: "{{dev_home}}/dwm"
     target: clean
   when: cloning.changed
+
+- name: Create sxhkd dir
+  file:
+      path: "{{dotfiles_user_home}}/.config/sxhkd"
+      state: directory
 
 - name: Configure sxhkd
   file:

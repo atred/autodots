@@ -8,19 +8,19 @@
 
 - name: Build slstatus
   make:
-    chdir: "{{dev_home}}/st"
+    chdir: "{{dev_home}}/slstatus"
   register: building
   when: cloning.changed
 
 - name: Install slstatus
   become: yes
   make:
-    chdir: "{{dev_home}}/st"
+    chdir: "{{dev_home}}/slstatus"
     target: install
   when: building.changed
 
 - name: Clean slstatus directory
   make:
-    chdir: "{{dev_home}}/st"
+    chdir: "{{dev_home}}/slstatus"
     target: clean
   when: cloning.changed

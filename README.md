@@ -8,8 +8,8 @@ Instructions coming soon...
 
 ## TODO
  - ufw
+ - volume and backlight
  - screen tearing
- - mononoki
  - firefox
  - fix vim on tty
  - better zsh

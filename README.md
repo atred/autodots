@@ -11,6 +11,7 @@ Instructions coming soon...
  - ufw
  - volume and backlight
  - screen tearing
+ - screen lock
  - firefox
  - fix vim on tty
  - better zsh

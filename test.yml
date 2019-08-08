@@ -1,9 +1,9 @@
 ---
 - hosts: localhost
   roles:
-  - {role: base, tags: ['t480', 'x220']}
-  - {role: zsh, tags: ['t480', 'x220']}
-  - {role: vim, tags: ['t480', 'x220']}
-  - {role: st, tags: ['t480', 'x220']}
-  - {role: slstatus, tags: ['t480', 'x220']}
-
+  - {role: base}
+  - {role: zsh}
+  - {role: vim}
+  - {role: st}
+  - {role: slstatus}
+  - {role: mononoki}

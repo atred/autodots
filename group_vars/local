@@ -36,6 +36,7 @@ base_package_list:
   - vim
   - neofetch
   - ufw
+  - tlp
   # Audio/Music
   - pulseaudio
   - pulsemixer
@@ -58,8 +59,11 @@ graphic_package_list:
  - zathura-pdf-mupdf
  - fzf
  - xorg-xbacklight
+ - light
  - dmenu
  - freetype2
  - libx11
  - libxft
  - libxinerama
+ - xorg-xrandr
+ - pamixer

@@ -10,6 +10,7 @@ Instructions coming soon...
  - fix vim
  - fix font size for smaller screen
  - ufw
+ - tlp
  - volume and backlight
  - screen tearing
  - screen lock

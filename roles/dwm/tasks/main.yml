@@ -11,6 +11,7 @@
   git:
     repo: https://github.com/atred/dwm
     dest: "{{dev_home}}/dwm"
+    version: "{{screen_size}}"
   register: cloning
   when: installation is success
 

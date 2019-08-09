@@ -8,7 +8,6 @@ Instructions coming soon...
 
 ## TODO
  - fix vim
- - fix font size for smaller screen
  - ufw
  - tlp
  - volume and backlight

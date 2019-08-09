@@ -15,6 +15,7 @@
   git:
     repo: https://github.com/atred/st
     dest: "{{dev_home}}/st"
+    version: "{{screen_size}}"
   register: cloning
   when: installation is success
 

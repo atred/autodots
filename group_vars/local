@@ -2,6 +2,8 @@
 
 # Number of batteries in device (1 or 2)
 bat_num: "1"
+# Screen size (12 or 14)
+screen_size: "12"
 
 # Base dirs
 dotfiles_user_home: "{{ '~' | expanduser }}"
@@ -48,6 +50,7 @@ base_package_list:
 graphic_package_list:
  - xorg-server
  - xorg-xinit
+ - xf86-video-intel
  - noto-fonts
  - firefox
  - sxhkd

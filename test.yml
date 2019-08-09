@@ -3,7 +3,7 @@
   roles:
   - {role: base}
   - {role: zsh}
-  - {role: vim}
+ #- {role: vim}
   - {role: st}
   - {role: slstatus}
   - {role: mononoki}

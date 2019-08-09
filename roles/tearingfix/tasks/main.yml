@@ -1,0 +1,8 @@
+---
+- name: Fix screen tearing
+  become: yes
+  file:
+    src: "{{role_path}}/files/20-intel.conf"
+    dest: /etc/X11/xorg.conf.d/20-intel.conf
+    state: link
+    force: yes

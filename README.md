@@ -10,8 +10,6 @@ Instructions coming soon...
  - fix vim
  - ufw
  - tlp
- - volume and backlight
- - screen tearing
  - screen lock
  - firefox
  - fix vim on tty

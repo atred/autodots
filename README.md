@@ -7,12 +7,10 @@ My automatic [suckless](https://suckless.org) Arch Linux configuration managed w
 Instructions coming soon...
 
 ## TODO
- - fix vim
  - ufw
  - tlp
  - screen lock
  - firefox
- - fix vim on tty
  - better zsh
  - mpd
 

@@ -7,6 +7,7 @@
     force: yes
   register: vimrc
 
-- name: Run :PlugInstall
-  command: vim +'PlugInstall --sync' +qa
+- name: Install vim plugins
+  command: vim -E -s -c "source ~/.vimrc" -c PlugInstall -c qa
+  register: pluginsInstalled
   when: vimrc.changed

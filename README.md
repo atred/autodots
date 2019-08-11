@@ -10,7 +10,6 @@ Instructions coming soon...
  - ufw
  - tlp
  - emacs
- - screen lock
  - firefox
  - better zsh
  - VMs

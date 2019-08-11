@@ -21,3 +21,7 @@ super + {F1,F2,F3}
         mpc {toggle,prev,next}
 super + shift + {F2,F3}
     	mpc volume {-,+}5
+
+# Lock screen
+super + x
+    	slock

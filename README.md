@@ -4,7 +4,11 @@ My automatic [suckless](https://suckless.org) Arch Linux configuration managed w
 ![alt text](https://raw.githubusercontent.com/atred/autodots/master/logo.png "bad joke, nothing to see here")
 
 ## Install
-Instructions coming soon...
+```
+git clone https://github.com/atred/autodots ~/dots
+cd ~/dots
+vim group_vars/local # edit variables for your setup
+ansible-playbook dev.yml
 
 ## TODO
  - firefox

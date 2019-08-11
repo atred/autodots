@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  roles:
+  - {role: base}
+  - {role: zsh}
+  - {role: vim}
+  - {role: st}
+  - {role: slstatus}
+  - {role: mononoki}
+  - {role: dwm}
+  - {role: tearingfix}
+  - {role: slock}
+  - {role: ufw}
+  - {role: tlp}
+  - {role: emacs}

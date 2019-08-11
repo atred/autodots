@@ -7,8 +7,6 @@ My automatic [suckless](https://suckless.org) Arch Linux configuration managed w
 Instructions coming soon...
 
 ## TODO
- - ufw
- - tlp
  - emacs
  - firefox
  - better zsh

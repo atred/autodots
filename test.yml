@@ -10,4 +10,5 @@
  #- {role: dwm}
  #- {role: tearingfix}
  #- {role: slock}
-  - {role: ufw}
+ #- {role: ufw}
+  - {role: tlp}

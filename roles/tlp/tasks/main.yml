@@ -1,0 +1,21 @@
+---
+- name: Install tlp
+  become: yes
+  pacman:
+    name: tlp
+    state: latest
+    update_cache: yes
+
+- name: Enable tlp
+  become: yes
+  service:
+    name: tlp
+    state: started
+    enabled: yes
+
+- name: Enable tlp-sleep
+  become: yes
+  service:
+    name: tlp-sleep
+    state: started
+    enabled: yes

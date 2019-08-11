@@ -1,0 +1,25 @@
+---
+- name: Install ufw
+  become: yes
+  pacman:
+    name: ufw
+    state: latest
+    update_cache: yes
+
+- name: Enable ufw service
+  become: yes
+  service:
+    name: ufw
+    enabled: yes
+    state: started
+  register: serv
+
+- name: Setup ufw
+  become: yes
+  command: ufw default deny
+  when: serv is changed
+
+- name: Enable ufw
+  become: yes
+  command: ufw enable
+  when: serv is changed

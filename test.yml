@@ -9,4 +9,5 @@
  #- {role: mononoki}
  #- {role: dwm}
  #- {role: tearingfix}
-  - {role: slock}
+ #- {role: slock}
+  - {role: ufw}

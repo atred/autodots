@@ -37,8 +37,6 @@ base_package_list:
   - xdg-user-dirs
   - vim
   - neofetch
-  - ufw
-  - tlp
   # Audio/Music
   - pulseaudio
   - pulsemixer

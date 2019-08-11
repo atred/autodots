@@ -11,9 +11,9 @@
   template:
     src: "lock.j2"
     dest: "/etc/systemd/system/lock.service"
-  register: creation
 
 - name: Enable slock service
   become: yes
-  command: systemctl enable lock.service
-  when: creation is changed
+  service:
+    name: lock
+    enabled: yes

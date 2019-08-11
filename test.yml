@@ -11,4 +11,5 @@
  #- {role: tearingfix}
  #- {role: slock}
  #- {role: ufw}
-  - {role: tlp}
+ #- {role: tlp}
+  - {role: emacs}

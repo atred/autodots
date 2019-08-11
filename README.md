@@ -7,7 +7,6 @@ My automatic [suckless](https://suckless.org) Arch Linux configuration managed w
 Instructions coming soon...
 
 ## TODO
- - emacs
  - firefox
  - better zsh
  - VMs

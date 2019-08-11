@@ -9,10 +9,11 @@ Instructions coming soon...
 ## TODO
  - ufw
  - tlp
+ - emacs
  - screen lock
  - firefox
  - better zsh
- - mpd
+ - VMs
 
 ## Credits
 [sloria's dotfiles](https://github.com/sloria/dotfiles) were an incredibly helpful resource for writing my own.

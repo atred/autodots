@@ -52,6 +52,7 @@ graphic_package_list:
  - xorg-xinit
  - xf86-video-intel
  - noto-fonts
+ - nm-connection-editor
  - firefox
  - sxhkd
  - pavucontrol

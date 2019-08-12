@@ -16,6 +16,7 @@
     path: "{{dotfiles_user_home}}/{{item}}"
     state: directory
   with_items:
+    - "cloud"
     - "dev"
     - "src"
     - "dl"

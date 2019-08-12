@@ -12,20 +12,26 @@
     repo: https://github.com/robbyrussell/oh-my-zsh
     dest: "{{dotfiles_user_home}}/.oh-my-zsh"
   when: installation is success
-  register: cloning
 
-- name: Build new .zshrc
+- name: Create new .zshrc
   file:
     src: "{{dotfiles_home}}/roles/zsh/files/zshrc"
     dest: "{{dotfiles_user_home}}/.zshrc"
     state: link
     force: yes
-  when: cloning is success
-  register: building
+  when: installation is success
+
+- name: Create new .zprofile
+  file:
+    src: "{{dotfiles_home}}/roles/zsh/files/zprofile"
+    dest: "{{dotfiles_user_home}}/.zprofile"
+    state: link
+    force: yes
+  when: installation is success
 
 - name: Change user shell
   become: yes
   user:
     name: andrew
     shell: /bin/zsh
-  when: building is success
+  when: installation is success

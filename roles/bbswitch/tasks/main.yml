@@ -1,0 +1,22 @@
+---
+- name: Install bbswitch
+  become: yes
+  pacman:
+    name: bbswitch
+    state: latest
+    update_cache: yes
+  when: bbswitch == "true"
+
+- name: Copy modprobe config
+  become: yes
+  copy:
+    src: bbswitch.conf
+    dest: /etc/modprobe.d/bbswitch.conf
+    force: yes
+
+- name: Start on boot
+  become: yes
+  copy:
+    src: load.conf
+    dest: /etc/modules-load.d/bbswitch.conf
+    force: yes

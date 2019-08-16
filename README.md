@@ -14,8 +14,6 @@ rc-pull
 ```
 
 ## TODO
- - Disable proprietary graphics
- - Dev environment (pref in a vm)
  - GnuCash
  - firefox
  - VMs

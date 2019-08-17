@@ -7,8 +7,12 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # program execution
-super + space ; {b,f,m,i,t,n}
-	{firefox,firefox,st -e ncmpcpp,idea,thunar,thunar}
+super + space ; {b,f,m,i,t,n,e}
+	{firefox,firefox, \
+	st -e ncmpcpp, \
+	idea, \
+	thunar,thunar \
+	emacs}
 
 # Volume, backlight, and media
 XF86AudioMute

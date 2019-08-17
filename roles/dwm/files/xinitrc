@@ -3,4 +3,5 @@ unclutter &
 sxhkd &
 setxkbmap -option caps:escape
 xset b off
+wmname LG3D
 exec dwm

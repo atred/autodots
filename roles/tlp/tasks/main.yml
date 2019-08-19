@@ -17,5 +17,5 @@
   become: yes
   service:
     name: tlp-sleep
-    state: enabled
+    state: started
     enabled: yes

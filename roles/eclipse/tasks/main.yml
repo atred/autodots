@@ -1,0 +1,7 @@
+---
+ - name: Install eclipse
+   become: yes
+   pacman:
+     name: eclipse-java
+     state: latest
+     update_cache: yes

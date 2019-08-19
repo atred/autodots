@@ -7,11 +7,12 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # program execution
-super + space ; {b,f,m,i,t,n,e}
+super + space ; {b,f,m,i,j,t,n,e}
 	{firefox,firefox, \
 	st -e ncmpcpp, \
 	idea, \
-	thunar,thunar \
+	eclipse, \
+	thunar,thunar, \
 	emacs}
 
 # Volume, backlight, and media

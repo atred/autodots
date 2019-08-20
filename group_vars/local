@@ -52,6 +52,7 @@ base_package_list:
 graphic_package_list:
  - xorg-server
  - xorg-xinit
+ - xorg-xrandr
  - wmname
  - xf86-video-intel
  - noto-fonts

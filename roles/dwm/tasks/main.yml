@@ -7,7 +7,7 @@
     update_cache: yes
   register: installation
 
-- name: Clone repo
+- name: Clone dwm
   git:
     repo: https://github.com/atred/dwm
     dest: "{{dev_home}}/dwm"
@@ -33,6 +33,25 @@
     chdir: "{{dev_home}}/dwm"
     target: clean
   when: cloning.changed
+
+- name: Clone mons
+  git:
+    repo: https://github.com/Ventto/mons
+    dest: "{{dev_home}}/mons"
+  register: mons
+
+- name: Install mons
+  become: yes
+  make:
+    chdir: "{{dev_home}}/mons"
+    target: install
+  when: mons.changed
+
+- name: Clean mons directory
+  make:
+    chdir: "{{dev_home}}/mons"
+    target: clean
+  when: mons.changed
 
 - name: Create sxhkd dir
   file:

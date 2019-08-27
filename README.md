@@ -9,8 +9,8 @@ git clone https://github.com/atred/autodots ~/dots
 cd ~/dots
 vim group_vars/local # edit variables for your setup
 ansible-playbook dev.yml
-rclone config # set remote name to "remote"
-rc-pull
+
+#super + d : cozy-desktop and follow instructions
 ```
 
 ## TODO

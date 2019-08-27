@@ -73,5 +73,5 @@ graphic_package_list:
  - libxft
  - libxinerama
  - pamixer
- - rclone
+ - cozy-desktop
  - keepassxc

@@ -99,9 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # rclone aliases
-alias rc-push="rclone sync ~/cloud remote:cloud"
-alias rc-pull="rclone sync remote:cloud ~/cloud"
-alias rc-ls="rclone ls remote:cloud"
+#alias rc-push="rclone sync ~/cloud remote:cloud"
+#alias rc-pull="rclone sync remote:cloud ~/cloud"
+#alias rc-ls="rclone ls remote:cloud"
 
 # mirrors
 alias update-mirrors="sudo reflector --country \"United States\" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist" 

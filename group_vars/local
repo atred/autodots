@@ -47,6 +47,7 @@ base_package_list:
   - mpd
   - mpc
   - ncmpcpp
+  - linux-headers
 
 # Graphical pacman packages
 graphic_package_list:
@@ -75,3 +76,4 @@ graphic_package_list:
  - pamixer
  - cozy-desktop
  - keepassxc
+ - virtualbox

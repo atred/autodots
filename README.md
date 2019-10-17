@@ -10,7 +10,7 @@ cd ~/dots
 vim group_vars/local # edit variables for your setup
 ansible-playbook dev.yml
 
-#super + d : cozy-desktop and follow instructions
+super + d : cozy-desktop and follow instructions
 ```
 
 ## TODO

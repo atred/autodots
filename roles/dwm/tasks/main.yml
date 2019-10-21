@@ -47,12 +47,6 @@
     target: install
   when: mons.changed
 
-- name: Clean mons directory
-  make:
-    chdir: "{{dev_home}}/mons"
-    target: clean
-  when: mons.changed
-
 - name: Create sxhkd dir
   file:
       path: "{{dotfiles_user_home}}/.config/sxhkd"

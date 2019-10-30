@@ -1,0 +1,13 @@
+---
+- name: Install throttled
+  become: yes
+  pacman:
+    name: throttled
+    state: latest
+    update_cache: yes
+
+- name: Enable throttled service
+  become: yes
+  service:
+    name: lenovo_fix
+    enabled: yes

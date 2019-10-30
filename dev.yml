@@ -9,10 +9,10 @@
   - {role: mononoki}
   - {role: dwm}
   - {role: tearingfix}
+  - {role: throttled}
   - {role: slock}
   - {role: ufw}
   - {role: tlp}
   - {role: emacs}
   - {role: bbswitch}
   - {role: intellij}
-  - {role: eclipse}

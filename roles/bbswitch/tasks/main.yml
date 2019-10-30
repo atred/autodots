@@ -5,7 +5,6 @@
     name: bbswitch
     state: latest
     update_cache: yes
-  when: bbswitch == "true"
 
 - name: Copy modprobe config
   become: yes

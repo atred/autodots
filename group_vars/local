@@ -1,12 +1,5 @@
 # vi: set ft=yaml :
 
-# Number of batteries in device (1 or 2)
-bat_num: "2"
-# Screen size (12 or 14)
-screen_size: "14"
-# Install bbswitch?
-bbswitch: "true"
-
 # Base dirs
 dotfiles_user_home: "{{ '~' | expanduser }}"
 dotfiles_home: "{{dotfiles_user_home}}/dots"
@@ -39,7 +32,6 @@ base_package_list:
   - xdg-user-dirs
   - vim
   - neofetch
-  - thefuck
   - reflector
   - linux-headers
   # Audio/Music
@@ -54,6 +46,8 @@ graphic_package_list:
  - xorg-server
  - xorg-xinit
  - xorg-xrandr
+ - xorg-fonts-misc
+ - bspwm
  - wmname
  - xf86-video-intel
  - noto-fonts
@@ -70,9 +64,7 @@ graphic_package_list:
  - xorg-xbacklight
  - dmenu
  - freetype2
- - libx11
- - libxft
- - libxinerama
+ - alacritty
  - pamixer
  - cozy-desktop
  - keepassxc

@@ -30,3 +30,7 @@ super + shift + {F2,F3}
 # Lock screen
 super + x
     	slock
+
+# Show books
+super + shift + b
+	cd ~/doc/books && ls -1 | dmenu -l 30 | xargs zathura

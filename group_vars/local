@@ -41,13 +41,13 @@ base_package_list:
   - neofetch
   - thefuck
   - reflector
+  - linux-headers
   # Audio/Music
   - pulseaudio
   - pulsemixer
   - mpd
   - mpc
   - ncmpcpp
-  - linux-headers
 
 # Graphical pacman packages
 graphic_package_list:
@@ -76,4 +76,3 @@ graphic_package_list:
  - pamixer
  - cozy-desktop
  - keepassxc
- - virtualbox

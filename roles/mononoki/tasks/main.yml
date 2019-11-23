@@ -1,4 +1,10 @@
 ---
+- name: Create font dir
+  become: yes
+  file:
+    path: "/usr/share/fonts"
+    state: directory
+
 - name: Checking for mononoki
   stat:
     path: /usr/share/fonts/mononoki-Regular.ttf

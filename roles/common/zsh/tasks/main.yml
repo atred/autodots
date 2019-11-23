@@ -15,7 +15,7 @@
 
 - name: Create new .zshrc
   file:
-    src: "{{dotfiles_home}}/roles/zsh/files/zshrc"
+    src: "{{role_path}}/files/zshrc"
     dest: "{{dotfiles_user_home}}/.zshrc"
     state: link
     force: yes
@@ -23,7 +23,7 @@
 
 - name: Create new .zprofile
   file:
-    src: "{{dotfiles_home}}/roles/zsh/files/zprofile"
+    src: "{{role_path}}/files/zprofile"
     dest: "{{dotfiles_user_home}}/.zprofile"
     state: link
     force: yes

@@ -32,7 +32,7 @@
 
 - name: Configure user dirs
   file:
-    src: "{{ dotfiles_home }}/roles/base/files/config/user-dirs.dirs"
+    src: "{{ role_path }}/files/config/user-dirs.dirs"
     dest: "{{ dotfiles_user_home }}/.config/user-dirs.dirs"
     state: link
     force: yes

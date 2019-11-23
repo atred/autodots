@@ -1,7 +1,0 @@
----
-- name: Install IntelliJ
-  become: yes
-  pacman:
-    name: intellij-idea-community-edition
-    state: latest
-    update_cache: yes

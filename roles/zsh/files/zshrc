@@ -105,6 +105,3 @@ source $ZSH/oh-my-zsh.sh
 
 # mirrors
 alias update-mirrors="sudo reflector --country \"United States\" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist" 
-
-# enable "thefuck"
-eval $(thefuck --alias)

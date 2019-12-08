@@ -59,7 +59,7 @@
 
 - name: Clone lemonbar
   git:
-    repo: https://github.com/lemonboy/bar
+    repo: https://github.com/krypt-n/bar
     dest: "{{src_home}}/lemonbar"
   register: lemonbar
 

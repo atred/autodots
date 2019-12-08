@@ -56,3 +56,23 @@
     dest: "{{dotfiles_user_home}}/.xinitrc"
     state: link
     force: yes
+
+- name: Clone lemonbar
+  git:
+    repo: https://github.com/lemonboy/bar
+    dest: "{{dev_home}}/lemonbar"
+  register: lemonbar
+
+- name: Install lemonbar
+  become: yes
+  make:
+    chdir: "{{dev_home}}/lemonbar"
+    target: install
+  when: lemonbar.changed
+
+- name: Configure lemonbar
+  file:
+    src: {{role_path}}/files/config/bspwm/bar.sh
+    dest: "{{dotfiles_user_home}}/.config/bspwm/bar.sh"
+    state: link
+    force: yes

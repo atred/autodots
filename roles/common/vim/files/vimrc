@@ -61,15 +61,6 @@ set wrap
 " Change parenthesis highlighting color
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
-" Budget electric pairs
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
 " C programming
 autocmd FileType c nnoremap <F5> :w<Enter>:!gcc %<Enter>
 

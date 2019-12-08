@@ -20,43 +20,6 @@
     target: install
   when: mons.changed
 
-- name: Create config dirs
-  file:
-    path: "{{dotfiles_user_home}}/.config/{{item}}"
-    state: directory
-  with_items:
-    - "alacritty"
-    - "sxhkd"
-    - "bspwm"
-
-- name: Configure sxhkd
-  file:
-    src: "{{role_path}}/files/config/sxhkd/sxhkdrc"
-    dest: "{{dotfiles_user_home}}/.config/sxhkd/sxhkdrc"
-    state: link
-    force: yes
- 
-- name: Configure bspwm
-  file:
-    src: "{{role_path}}/files/config/bspwm/bspwmrc"
-    dest: "{{dotfiles_user_home}}/.config/bspwm/bspwmrc"
-    state: link
-    force: yes
-
-- name: Configure terminal
-  file:
-    src: "{{role_path}}/files/config/alacritty/alacritty.yml"
-    dest: "{{dotfiles_user_home}}/.config/alacritty/alacritty.yml"
-    state: link
-    force: yes
-
-- name: Link xinitrc
-  file:
-    src: "{{role_path}}/files/xinitrc"
-    dest: "{{dotfiles_user_home}}/.xinitrc"
-    state: link
-    force: yes
-
 - name: Clone lemonbar
   git:
     repo: https://github.com/krypt-n/bar
@@ -74,5 +37,42 @@
   file:
     src: {{role_path}}/files/config/bspwm/bar.sh
     dest: "{{dotfiles_user_home}}/.config/bspwm/bar.sh"
+    state: link
+    force: yes
+
+- name: Create config dirs
+  file:
+    path: "{{dotfiles_user_home}}/.config/{{item}}"
+    state: directory
+  with_items:
+    - "alacritty"
+    - "sxhkd"
+    - "bspwm"
+
+- name: Configure sxhkd
+  file:
+    src: "{{role_path}}/files/config/sxhkd/sxhkdrc"
+    dest: "{{dotfiles_user_home}}/.config/sxhkd/sxhkdrc"
+    state: link
+    force: yes
+ 
+- name: Configure bspwm and bar
+  file:
+    src: "{{role_path}}/files/config/bspwm/*"
+    dest: "{{dotfiles_user_home}}/.config/bspwm"
+    state: link
+    force: yes
+
+- name: Configure terminal
+  file:
+    src: "{{role_path}}/files/config/alacritty/alacritty.yml"
+    dest: "{{dotfiles_user_home}}/.config/alacritty/alacritty.yml"
+    state: link
+    force: yes
+
+- name: Link xinitrc
+  file:
+    src: "{{role_path}}/files/xinitrc"
+    dest: "{{dotfiles_user_home}}/.xinitrc"
     state: link
     force: yes

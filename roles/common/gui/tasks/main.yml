@@ -10,13 +10,13 @@
 - name: Clone mons
   git:
     repo: https://github.com/Ventto/mons
-    dest: "{{dev_home}}/mons"
+    dest: "{{src_home}}/mons"
   register: mons
 
 - name: Install mons
   become: yes
   make:
-    chdir: "{{dev_home}}/mons"
+    chdir: "{{src_home}}/mons"
     target: install
   when: mons.changed
 
@@ -60,13 +60,13 @@
 - name: Clone lemonbar
   git:
     repo: https://github.com/lemonboy/bar
-    dest: "{{dev_home}}/lemonbar"
+    dest: "{{src_home}}/lemonbar"
   register: lemonbar
 
 - name: Install lemonbar
   become: yes
   make:
-    chdir: "{{dev_home}}/lemonbar"
+    chdir: "{{src_home}}/lemonbar"
     target: install
   when: lemonbar.changed
 

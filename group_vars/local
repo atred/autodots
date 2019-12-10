@@ -68,3 +68,4 @@ graphic_package_list:
  - pamixer
  - cozy-desktop
  - keepassxc
+ - xdo

@@ -12,10 +12,19 @@ while read -r line ; do
 			# clock output
 			sys="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
 			;;
-		T*)
-			# xtitle output
-			title="%{F$COLOR_TITLE_FG}%{B$COLOR_TITLE_BG} ${line#?} %{B-}%{F-}"
-			;;
+                b*)
+                        # battery 0 output
+                        bat="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
+                        ;;
+                B*)
+                        # battery 1 output
+                        bat2="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
+                        ;;
+
+                A*)
+                        # audio level and mute
+                        vol="%{F$COLOR_SYS_FG}%{B$COLOR_SYS_BG} ${line#?} %{B-}%{F-}"
+                        ;;
 		W*)
 			# bspwm's state
 			wm=
@@ -114,5 +123,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${wm}%{c}${title}%{r}${sys}"
+	printf "%s\n" "%{l}${wm}%{r}${vol}|${bat}|${bat2}|${sys}"
 done

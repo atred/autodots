@@ -48,6 +48,7 @@
     - "alacritty"
     - "sxhkd"
     - "bspwm"
+    - "rofi"
 
 - name: Configure sxhkd
   file:
@@ -67,6 +68,13 @@
   file:
     src: "{{role_path}}/files/config/alacritty/alacritty.yml"
     dest: "{{dotfiles_user_home}}/.config/alacritty/alacritty.yml"
+    state: link
+    force: yes
+
+- name: Configure rofi
+  file:
+    src: "{{role_path}}/files/config/rofi/*"
+    dest: "{{dotfiles_user_home}}/.config/rofi"
     state: link
     force: yes
 

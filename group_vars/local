@@ -47,7 +47,9 @@ graphic_package_list:
  - xorg-xinit
  - xorg-xrandr
  - xorg-fonts-misc
+ - xorg-xsetroot
  - bspwm
+ - picom
  - wmname
  - xf86-video-intel
  - noto-fonts
@@ -56,13 +58,14 @@ graphic_package_list:
  - sxhkd
  - pavucontrol
  - scrot
+ - feh
  - unclutter
  - zathura
  - zathura-djvu
  - zathura-pdf-mupdf
  - fzf
  - xorg-xbacklight
- - dmenu
+ - rofi
  - freetype2
  - alacritty
  - pamixer

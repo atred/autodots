@@ -10,7 +10,6 @@ endif
 " Plug
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
-Plug 'vim-scripts/wombat256.vim'
 Plug 'kovetskiy/sxhkd-vim'
 call plug#end()
 
@@ -65,7 +64,6 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 autocmd FileType c nnoremap <F5> :w<Enter>:!gcc %<Enter>
 
 " Colors
-silent! colorscheme wombat256mod
-silent! let g:lightline = { 'colorscheme': 'wombat', }
+let g:lightline = {'colorscheme': 'wombat'}
 set laststatus=2
 set noshowmode

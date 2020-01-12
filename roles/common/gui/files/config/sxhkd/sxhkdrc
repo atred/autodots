@@ -31,7 +31,7 @@ super + x
 
 # Show books
 super + shift + b
-	cd ~/doc/books && ls -1 | rofi -dmenu | xargs zathura
+	cd ~/doc/books && ls -1 | rofi -dmenu -i | xargs zathura
 #
 # wm independent hotkeys
 #
@@ -42,7 +42,7 @@ super + Return
 
 # program launcher
 super + d
-	rofi -show run -columns 4 -show-icons -padding 18 -modi drun
+	rofi -show drun -columns 4 -show-icons -padding 18 -modi drun
 
 #
 # bspwm hotkeys

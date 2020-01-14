@@ -1,6 +1,10 @@
 #! /bin/sh
 
 sxhkd &
+unclutter &
+setxkbmap -option caps:escape
+xset b off
+wmname LG3D
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 

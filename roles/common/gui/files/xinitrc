@@ -1,5 +1,1 @@
-unclutter &
-setxkbmap -option caps:escape
-xset b off
-wmname LG3D
 exec bspwm

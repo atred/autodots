@@ -1,5 +1,11 @@
 #! /bin/sh
 
+PANEL_FIFO=/tmp/panel-fifo
+PANEL_HEIGHT=24
+PANEL_FONT="mononoki-12"
+PANEL_WM_NAME=bspwm_panel
+export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
+
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
 	printf "%s\n" "The panel is already running." >&2
 	exit 1

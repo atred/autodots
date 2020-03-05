@@ -6,10 +6,9 @@
     - common/vim
     - common/mononoki
     - common/gui
-#    - common/tearingfix
-#    - common/throttled
-#    - common/slock
-#    - common/ufw
-#    - common/tlp
+    - common/tearingfix
+    - common/slock
+    - common/ufw
+    - common/tlp
+    - common/bbswitch
 #    - common/emacs
-#    - common/bbswitch

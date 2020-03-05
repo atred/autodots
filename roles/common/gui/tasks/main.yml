@@ -37,7 +37,7 @@
  
 - name: Configure bspwm
   file:
-    src: "{{role_path}}/files/config/bspwm/*"
+    src: "{{role_path}}/files/config/bspwm"
     dest: "{{dotfiles_user_home}}/.config/bspwm"
     state: link
     force: yes

@@ -1,11 +1,4 @@
 ---
-- name: Install slock
-  become: yes
-  pacman:
-    name: slock
-    state: latest
-    update_cache: yes
-
 - name: Create slock service
   become: yes
   template:

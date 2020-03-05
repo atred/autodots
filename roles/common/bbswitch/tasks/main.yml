@@ -1,8 +1,8 @@
 ---
 - name: Install bbswitch
   become: yes
-  pacman:
-    name: bbswitch
+  apt:
+    name: bbswitch-dkms
     state: latest
     update_cache: yes
 

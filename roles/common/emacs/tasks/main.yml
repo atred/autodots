@@ -1,7 +1,7 @@
 ---
 - name: Install emacs
   become: yes
-  pacman:
+  apt:
     name: emacs
     state: latest
     update_cache: yes

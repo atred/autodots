@@ -14,6 +14,10 @@ ansible-playbook dev.yml # choose what you want to install in dev.yml
 ## Credits
 [sloria's dotfiles](https://github.com/sloria/dotfiles) were an incredibly helpful resource for writing my own.
 
+## Notes
+ - Install apt-transport-https
+ - Switch to https and bullseye in /etc/apt/sources.list
+
 ## To do
  - automate blurry compton
  - fix colors

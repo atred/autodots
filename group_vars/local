@@ -16,59 +16,49 @@ git_email: atredinbo@gmail.com
 
 # Basic pacman packages
 base_package_list:
-  # Basic widgets
-  - tree
-  - htop
-  - bc
-  - dosfstools
-  - exfat-utils
-  - networkmanager
-  - ntfs-3g
-  - unrar
-  - unzip
-  - fzf
-  - atool
-  - git
-  - xdg-user-dirs
-  - vim
-  - neofetch
-  - reflector
-  - linux-headers
-  # Audio/Music
-  - pulseaudio
-  - pulsemixer
-  - mpd
-  - mpc
-  - ncmpcpp
+   # Build essentials (ie make)
+ - build-essential
+ # Basic widgets
+ - tree
+ - htop
+ - bc
+ - network-manager
+ - unrar
+ - unzip
+ - atool
+ - git
+ - xdg-user-dirs
+ - vim
+ - neofetch
+ # Audio/Music
+ - pulseaudio
+ - pulsemixer
+ - mpd
+ - mpc
+ - ncmpcpp
 
 # Graphical pacman packages
 graphic_package_list:
- - xorg-server
- - xorg-xinit
- - xorg-xrandr
- - xorg-fonts-misc
- - xorg-xsetroot
+ - xorg
  - bspwm
- - picom
- - wmname
- - xf86-video-intel
- - noto-fonts
- - nm-connection-editor
- - firefox
  - sxhkd
+ - suckless-tools
+ - compton
+ - lemonbar
+ - xfonts-terminus
+ - fonts-noto-core
+ - fonts-noto-extra
+ - fonts-noto-color-emoji
+ - fonts-noto-cjk
+ - firefox-esr
  - pavucontrol
  - scrot
  - feh
  - unclutter
  - zathura
  - zathura-djvu
- - zathura-pdf-mupdf
- - fzf
- - xorg-xbacklight
+ - xbacklight
  - rofi
- - freetype2
- - alacritty
- - pamixer
- - cozy-desktop
+ - kitty
  - keepassxc
  - xdo

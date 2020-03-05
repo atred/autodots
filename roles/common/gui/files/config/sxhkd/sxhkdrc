@@ -15,9 +15,9 @@ super + space ; {b,f,i,t,n,e}
 
 # Volume, backlight, and media
 XF86AudioMute
-	pamixer -t
+	pactl set-sink-mute 0 toggle
 XF86Audio{Raise,Lower}Volume
-	pamixer -{i,d} 5
+	pactl set-sink-volume 0 {+,-}5%
 XF86MonBrightness{Up,Down}
 	xbacklight -{inc,dec} 10
 super + {F1,F2,F3}
@@ -38,11 +38,11 @@ super + shift + b
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # program launcher
 super + d
-	rofi -show drun -columns 4 -show-icons -padding 18 -modi drun
+	rofi -show drun
 
 #
 # bspwm hotkeys

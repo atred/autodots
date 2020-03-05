@@ -1,7 +1,7 @@
 ---
 - name: Install graphical packages
   become: yes
-  pacman: 
+  apt: 
     name: "{{graphic_package_list}}"
     state: latest
     update_cache: yes
@@ -20,35 +20,13 @@
     target: install
   when: mons.changed
 
-- name: Clone lemonbar
-  git:
-    repo: https://github.com/krypt-n/bar
-    dest: "{{src_home}}/lemonbar"
-  register: lemonbar
-
-- name: Install lemonbar
-  become: yes
-  make:
-    chdir: "{{src_home}}/lemonbar"
-    target: install
-  when: lemonbar.changed
-
-- name: Configure lemonbar
-  file:
-    src: {{role_path}}/files/config/bspwm/bar.sh
-    dest: "{{dotfiles_user_home}}/.config/bspwm/bar.sh"
-    state: link
-    force: yes
-
 - name: Create config dirs
   file:
     path: "{{dotfiles_user_home}}/.config/{{item}}"
     state: directory
   with_items:
-    - "alacritty"
     - "sxhkd"
     - "bspwm"
-    - "rofi"
 
 - name: Configure sxhkd
   file:
@@ -57,24 +35,10 @@
     state: link
     force: yes
  
-- name: Configure bspwm and bar
+- name: Configure bspwm
   file:
     src: "{{role_path}}/files/config/bspwm/*"
     dest: "{{dotfiles_user_home}}/.config/bspwm"
-    state: link
-    force: yes
-
-- name: Configure terminal
-  file:
-    src: "{{role_path}}/files/config/alacritty/alacritty.yml"
-    dest: "{{dotfiles_user_home}}/.config/alacritty/alacritty.yml"
-    state: link
-    force: yes
-
-- name: Configure rofi
-  file:
-    src: "{{role_path}}/files/config/rofi/*"
-    dest: "{{dotfiles_user_home}}/.config/rofi"
     state: link
     force: yes
 

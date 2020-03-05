@@ -1,6 +1,6 @@
-PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
-PANEL_FONT="mononoki-12"
-PANEL_WM_NAME=bspwm_panel
-export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
+#PANEL_FIFO=/tmp/panel-fifo
+#PANEL_HEIGHT=24
+#PANEL_FONT="mononoki-12"
+#PANEL_WM_NAME=bspwm_panel
+#export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x bspwm >/dev/null && exec startx

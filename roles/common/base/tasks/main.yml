@@ -1,7 +1,15 @@
 ---
+- name: Update mirrorlist to bullseye
+  become: yes
+  file:
+    src: "{{ role_path }}/files/sources.list"
+    dest: "/etc/apt/sources.list"
+    state: link
+    force: yes
+
 - name: Install base packages
   become: yes
-  pacman: 
+  apt: 
     name: "{{base_package_list}}"
     state: latest
     update_cache: yes
@@ -41,3 +49,4 @@
 - name: Update user-dirs
   command: xdg-user-dirs-update
   when: userdirs.changed
+

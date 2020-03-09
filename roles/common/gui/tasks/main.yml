@@ -27,6 +27,7 @@
   with_items:
     - "sxhkd"
     - "bspwm"
+    - "yabar"
 
 - name: Configure sxhkd
   file:
@@ -39,6 +40,13 @@
   file:
     src: "{{role_path}}/files/config/bspwm"
     dest: "{{dotfiles_user_home}}/.config/bspwm"
+    state: link
+    force: yes
+
+- name: Configure yabar
+  file:
+    src: "{{role_path}}/files/config/yabar"
+    dest: "{{dotfiles_user_home}}/.config/yabar"
     state: link
     force: yes
 

@@ -44,8 +44,7 @@ graphic_package_list:
  - sxhkd
  - suckless-tools
  - compton
- - lemonbar
- - xfonts-terminus
+ - yabar
  - fonts-noto-core
  - fonts-noto-extra
  - fonts-noto-color-emoji

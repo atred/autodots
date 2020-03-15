@@ -17,14 +17,14 @@ git_email: atredinbo@gmail.com
 # Basic pacman packages
 base_package_list:
   # Basic widgets
+  - base-devel
   - tree
   - htop
   - bc
-  - dosfstools
+  - curl
   - exfat-utils
-  - networkmanager
-  - ntfs-3g
-  - unrar
+  - NetworkManager
+  - elogind
   - unzip
   - fzf
   - atool
@@ -32,28 +32,27 @@ base_package_list:
   - xdg-user-dirs
   - vim
   - neofetch
-  - reflector
+  - fontconfig
   - linux-headers
   # Audio/Music
   - pulseaudio
   - pulsemixer
-  - mpd
-  - mpc
-  - ncmpcpp
 
 # Graphical pacman packages
 graphic_package_list:
- - xorg-server
- - xorg-xinit
- - xorg-xrandr
- - xorg-fonts-misc
- - xorg-xsetroot
+ - xorg-minimal
+ - xinit
+ - xrandr
+ - xorg-fonts
+ - xsetroot
+ - libxcb-devel
+ - libXft-devel
  - bspwm
  - picom
  - wmname
  - xf86-video-intel
- - noto-fonts
- - nm-connection-editor
+ - noto-fonts-ttf
+ - noto-fonts-emoji
  - firefox
  - sxhkd
  - pavucontrol
@@ -63,12 +62,10 @@ graphic_package_list:
  - zathura
  - zathura-djvu
  - zathura-pdf-mupdf
- - fzf
- - xorg-xbacklight
+ - xbacklight
  - rofi
- - freetype2
+ - freetype
  - alacritty
  - pamixer
- - cozy-desktop
  - keepassxc
  - xdo

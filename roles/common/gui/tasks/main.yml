@@ -1,7 +1,7 @@
 ---
 - name: Install graphical packages
   become: yes
-  pacman: 
+  xbps: 
     name: "{{graphic_package_list}}"
     state: latest
     update_cache: yes
@@ -22,7 +22,7 @@
 
 - name: Clone lemonbar
   git:
-    repo: https://github.com/krypt-n/bar
+    repo: https://github.com/drscream/bar
     dest: "{{src_home}}/lemonbar"
   register: lemonbar
 
@@ -32,13 +32,6 @@
     chdir: "{{src_home}}/lemonbar"
     target: install
   when: lemonbar.changed
-
-- name: Configure lemonbar
-  file:
-    src: {{role_path}}/files/config/bspwm/bar.sh
-    dest: "{{dotfiles_user_home}}/.config/bspwm/bar.sh"
-    state: link
-    force: yes
 
 - name: Create config dirs
   file:

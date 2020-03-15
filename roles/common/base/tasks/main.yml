@@ -1,8 +1,8 @@
 ---
 - name: Install base packages
   become: yes
-  pacman: 
-    name: "{{base_package_list}}"
+  xbps: 
+    name: "{{ base_package_list }}"
     state: latest
     update_cache: yes
 

@@ -1,4 +1,10 @@
 ---
+- name: Create xorg.conf.d
+  become: yes
+  file:
+    path: /etc/X11/xorg.conf.d
+    state: directory
+
 - name: Fix screen tearing
   become: yes
   file:

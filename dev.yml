@@ -7,9 +7,9 @@
     - common/mononoki
     - common/gui
     - common/tearingfix
-    - common/throttled
-    - common/slock
-    - common/ufw
-    - common/tlp
-    - common/emacs
     - common/bbswitch
+#    - common/throttled
+#    - common/slock
+#    - common/ufw
+#    - common/tlp
+#    - common/emacs

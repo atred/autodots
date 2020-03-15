@@ -1,10 +1,16 @@
 ---
 - name: Install bbswitch
   become: yes
-  pacman:
+  xbps:
     name: bbswitch
     state: latest
     update_cache: yes
+
+- name: Create modules-load.d
+  become: yes
+  file:
+    dest: /etc/modules-load.d
+    state: directory
 
 - name: Copy modprobe config
   become: yes

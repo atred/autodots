@@ -1,7 +1,7 @@
 ---
 - name: Install zsh
   become: yes
-  pacman: 
+  xbps: 
     name: zsh
     state: latest
     update_cache: yes

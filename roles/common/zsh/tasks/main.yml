@@ -21,14 +21,6 @@
     force: yes
   when: installation is success
 
-- name: Create new .zprofile
-  file:
-    src: "{{role_path}}/files/zprofile"
-    dest: "{{dotfiles_user_home}}/.zprofile"
-    state: link
-    force: yes
-  when: installation is success
-
 - name: Change user shell
   become: yes
   user:

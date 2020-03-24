@@ -17,6 +17,6 @@ bspc config gapless_monocle      true
 
 xsetroot -cursor_name left_ptr
 feh --bg-fill $HOME/.config/bspwm/wall.jpg
-compton --config $HOME/.config/bspwm/picom.conf &
+picom --config $HOME/.config/bspwm/picom.conf --experimental-backends &
 
 $HOME/.config/bspwm/panel.sh

@@ -33,13 +33,6 @@
     target: install
   when: lemonbar.changed
 
-- name: Configure lemonbar
-  file:
-    src: {{role_path}}/files/config/bspwm/bar.sh
-    dest: "{{dotfiles_user_home}}/.config/bspwm/bar.sh"
-    state: link
-    force: yes
-
 - name: Create config dirs
   file:
     path: "{{dotfiles_user_home}}/.config/{{item}}"
@@ -59,7 +52,7 @@
  
 - name: Configure bspwm and bar
   file:
-    src: "{{role_path}}/files/config/bspwm/*"
+    src: "{{role_path}}/files/config/bspwm"
     dest: "{{dotfiles_user_home}}/.config/bspwm"
     state: link
     force: yes

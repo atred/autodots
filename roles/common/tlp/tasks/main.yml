@@ -12,10 +12,3 @@
     name: tlp
     state: started
     enabled: yes
-
-- name: Enable tlp-sleep
-  become: yes
-  service:
-    name: tlp-sleep
-    state: started
-    enabled: yes

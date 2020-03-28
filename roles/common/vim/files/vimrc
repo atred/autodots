@@ -9,6 +9,7 @@ endif
 
 " Plug
 call plug#begin('~/.vim/plugged')
+Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'kovetskiy/sxhkd-vim'
 call plug#end()
@@ -64,6 +65,11 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 autocmd FileType c nnoremap <F5> :w<Enter>:!gcc %<Enter>
 
 " Colors
-let g:lightline = {'colorscheme': 'wombat'}
+colorscheme nord
+let g:lightline = {
+    \ 'colorscheme': 'nord',
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }
+    \ }
 set laststatus=2
 set noshowmode

@@ -72,3 +72,15 @@ graphic_package_list:
  - cozy-desktop
  - keepassxc
  - xdo
+
+polybar_package_list:
+ - cairo
+ - libxcb
+ - python
+ - xcb-proto
+ - xcb-util-image
+ - xcb-util-wm
+ - xcb-util-cursor
+ - libpulse
+ - cmake
+ - ttf-font-awesome

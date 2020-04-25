@@ -19,7 +19,7 @@ XF86AudioMute
 XF86Audio{Raise,Lower}Volume
 	pamixer -{i,d} 5
 XF86MonBrightness{Up,Down}
-	xbacklight -{inc,dec} 10
+	xbacklight -{inc,dec} 5
 super + {F1,F2,F3}
         mpc {toggle,prev,next}
 super + shift + {F2,F3}
@@ -51,6 +51,10 @@ super + d
 # quit/restart bspwm
 super + shift + {e,r}
 	bspc {quit,wm -r}
+
+# restart polybar
+super + alt + r
+    	${HOME}/.config/polybar/launch.sh
 
 # close and kill
 super + {_,shift + }q

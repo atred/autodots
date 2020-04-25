@@ -1,0 +1,21 @@
+---
+- name: Install polybar packages
+  become: yes
+  pacman: 
+    name: "{{polybar_package_list}}"
+    state: latest
+    update_cache: yes
+
+- name: Clone polybar
+  become: yes
+  git:
+    repo: https://github.com/polybar/polybar
+    dest: "{{src_home}}/polybar"
+  register: polybar
+
+- name: Install polybar
+  become: yes
+  shell: "bash {{src_home}}/polybar/build.sh -p -g -A"
+  args:
+    chdir: "{{src_home}}/polybar"
+  when: polybar.changed

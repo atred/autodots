@@ -15,6 +15,7 @@ ansible-playbook dev.yml # choose what you want to install in dev.yml
 [sloria's dotfiles](https://github.com/sloria/dotfiles) were an incredibly helpful resource for writing my own.
 
 ## To do
- - automate blurry compton
  - fix colors
- - shadows
+ - add compositing
+ - screen lock
+ - statusbar

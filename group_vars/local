@@ -48,7 +48,9 @@ graphic_package_list:
  - xorg-xrandr
  - xorg-fonts-misc
  - xorg-xsetroot
- - bspwm
+ - libx11
+ - libxft
+ - libxinerama
  - picom
  - wmname
  - xf86-video-intel
@@ -65,10 +67,8 @@ graphic_package_list:
  - zathura-pdf-mupdf
  - fzf
  - xorg-xbacklight
- - rofi
+ - dmenu
  - freetype2
- - alacritty
  - pamixer
- - cozy-desktop
  - keepassxc
  - xdo

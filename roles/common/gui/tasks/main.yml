@@ -20,28 +20,39 @@
     target: install
   when: mons.changed
 
-- name: Clone lemonbar
+- name: Clone dwm
   git:
-    repo: https://github.com/krypt-n/bar
-    dest: "{{src_home}}/lemonbar"
-  register: lemonbar
+    repo: https://github.com/atred/dwm
+    dest: "{{dev_home}}/dwm"
+  register: dwm
 
-- name: Install lemonbar
+- name: Install dwm
   become: yes
   make:
-    chdir: "{{src_home}}/lemonbar"
+    chdir: "{{dev_home}}/dwm"
     target: install
-  when: lemonbar.changed
+  when: dwm.changed
+
+- name: Clone st
+  git:
+    repo: https://github.com/atred/st
+    dest: "{{dev_home}}/st"
+  register: st
+
+- name: Install st
+  become: yes
+  make:
+    chdir: "{{dev_home}}/st"
+    target: install
+  when: st.changed
 
 - name: Create config dirs
   file:
     path: "{{dotfiles_user_home}}/.config/{{item}}"
     state: directory
   with_items:
-    - "alacritty"
     - "sxhkd"
-    - "bspwm"
-    - "rofi"
+    - "fontconfig"
 
 - name: Configure sxhkd
   file:
@@ -49,25 +60,11 @@
     dest: "{{dotfiles_user_home}}/.config/sxhkd/sxhkdrc"
     state: link
     force: yes
- 
-- name: Configure bspwm and bar
-  file:
-    src: "{{role_path}}/files/config/bspwm"
-    dest: "{{dotfiles_user_home}}/.config/bspwm"
-    state: link
-    force: yes
 
-- name: Configure terminal
+- name: Configure fonts
   file:
-    src: "{{role_path}}/files/config/alacritty/alacritty.yml"
-    dest: "{{dotfiles_user_home}}/.config/alacritty/alacritty.yml"
-    state: link
-    force: yes
-
-- name: Configure rofi
-  file:
-    src: "{{role_path}}/files/config/rofi/*"
-    dest: "{{dotfiles_user_home}}/.config/rofi"
+    src: "{{role_path}}/files/config/fontconfig/fonts.conf"
+    dest: "{{dotfiles_user_home}}/.config/fontconfig/fonts.conf"
     state: link
     force: yes
 

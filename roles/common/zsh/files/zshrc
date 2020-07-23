@@ -106,5 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # git update
 alias gs="git status"
 
-# mirrors
-alias update-mirrors="sudo reflector --country \"United States\" --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist" 
+# neovim
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+export EDITOR=nvim

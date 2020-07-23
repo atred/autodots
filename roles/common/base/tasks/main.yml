@@ -16,18 +16,17 @@
     path: "{{dotfiles_user_home}}/{{item}}"
     state: directory
   with_items:
-    - "cloud"
+    - ".local"
+    - ".local/temp"
+    - ".local/pub"
     - "dev"
     - "src"
     - "dl"
     - "doc"
     - "doc/books"
+    - "doc/pres"
     - "mus"
-    - "pic"
-    - "pres"
-    - "repo"
-    - "tmp"
-    - "vid"
+    - "pic/vid"
     - ".config"
 
 - name: Configure user dirs

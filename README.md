@@ -15,7 +15,10 @@ ansible-playbook dev.yml # choose what you want to install in dev.yml
 [sloria's dotfiles](https://github.com/sloria/dotfiles) were an incredibly helpful resource for writing my own.
 
 ## To do
- - fix colors
- - add compositing
- - screen lock
- - statusbar
+ - Automate the ./install of WhiteSur theme
+
+## Notes for gsettings
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-dark"
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gsettings set org.gnome.shell.extensions.user-theme name "WhiteSur-dark"

@@ -30,45 +30,25 @@ base_package_list:
   - atool
   - git
   - xdg-user-dirs
-  - vim
+  - neovim
   - neofetch
-  - reflector
-  - linux-headers
+  - fontconfig
   # Audio/Music
   - pulseaudio
   - pulsemixer
-  - mpd
-  - mpc
-  - ncmpcpp
 
 # Graphical pacman packages
 graphic_package_list:
- - xorg-server
- - xorg-xinit
- - xorg-xrandr
- - xorg-fonts-misc
- - xorg-xsetroot
- - libx11
- - libxft
- - libxinerama
- - picom
- - wmname
- - xf86-video-intel
- - noto-fonts
- - nm-connection-editor
- - firefox
- - sxhkd
- - pavucontrol
- - scrot
- - feh
- - unclutter
- - zathura
- - zathura-djvu
- - zathura-pdf-mupdf
- - fzf
- - xorg-xbacklight
- - dmenu
- - freetype2
- - pamixer
- - keepassxc
- - xdo
+  - gnome
+  - gtk-engine-murrine
+  - gtk-engines
+  - gnome-tweaks
+  - gnome-shell-extensions
+  - noto-fonts
+  - nm-connection-editor
+  - firefox
+  - feh
+  - zathura
+  - zathura-djvu
+  - zathura-pdf-mupdf
+  - keepassxc

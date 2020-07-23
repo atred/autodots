@@ -1,10 +1,11 @@
-" Vim Config
+" Neovim Config
 
 " Get plug (courtesy of Luke Smith)
-if ! filereadable(expand('~/.vim/autoload/plug.vim'))
+if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
-	silent !mkdir -p ~/.vim/autoload/
-	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.vim/autoload/plug.vim
+	silent !mkdir -p ~/.config/nvim/autoload
+	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
+	autocmd VimEnter * PlugInstall
 endif
 
 " Plug

@@ -1,0 +1,24 @@
+---
+- name: Create font dir
+  become: yes
+  file:
+    path: "/usr/share/fonts/iosevka"
+    state: directory
+
+- name: Checking for Iosevka
+  stat:
+    path: /usr/share/fonts/iosevka/ttf
+  register: fontinst
+
+- name: Install Iosevka
+  become: yes
+  unarchive:
+    src: https://github.com/be5invis/Iosevka/releases/download/v3.3.1/pkg-iosevka-3.3.1.zip
+    dest: /usr/share/fonts/iosevka
+    remote_src: yes
+  when: not fontinst.stat.exists
+  register: fontdl
+
+- name: Reload font cache
+  command: fc-cache -fv
+  when: fontdl is changed

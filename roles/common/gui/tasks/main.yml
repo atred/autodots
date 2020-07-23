@@ -7,70 +7,16 @@
     update_cache: yes
   register: installation
 
-- name: Clone mons
-  git:
-    repo: https://github.com/Ventto/mons
-    dest: "{{src_home}}/mons"
-  register: mons
-
-- name: Install mons
-  become: yes
-  make:
-    chdir: "{{src_home}}/mons"
-    target: install
-  when: mons.changed
-
-- name: Clone dwm
-  git:
-    repo: https://github.com/atred/dwm
-    dest: "{{dev_home}}/dwm"
-  register: dwm
-
-- name: Install dwm
-  become: yes
-  make:
-    chdir: "{{dev_home}}/dwm"
-    target: install
-  when: dwm.changed
-
-- name: Clone st
-  git:
-    repo: https://github.com/atred/st
-    dest: "{{dev_home}}/st"
-  register: st
-
-- name: Install st
-  become: yes
-  make:
-    chdir: "{{dev_home}}/st"
-    target: install
-  when: st.changed
-
 - name: Create config dirs
   file:
     path: "{{dotfiles_user_home}}/.config/{{item}}"
     state: directory
   with_items:
-    - "sxhkd"
     - "fontconfig"
-
-- name: Configure sxhkd
-  file:
-    src: "{{role_path}}/files/config/sxhkd/sxhkdrc"
-    dest: "{{dotfiles_user_home}}/.config/sxhkd/sxhkdrc"
-    state: link
-    force: yes
 
 - name: Configure fonts
   file:
     src: "{{role_path}}/files/config/fontconfig/fonts.conf"
     dest: "{{dotfiles_user_home}}/.config/fontconfig/fonts.conf"
-    state: link
-    force: yes
-
-- name: Link xinitrc
-  file:
-    src: "{{role_path}}/files/xinitrc"
-    dest: "{{dotfiles_user_home}}/.xinitrc"
     state: link
     force: yes

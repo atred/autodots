@@ -1,13 +1,12 @@
 ---
+- name: Create vim config dir
+  file:
+    path: "{{ dotfiles_user_home }}/.config/nvim"
+    state: directory
+
 - name: Link vimrc
   file:
     src: "{{ role_path }}/files/vimrc"
-    dest: "{{ dotfiles_user_home }}/.vimrc"
+    dest: "{{ dotfiles_user_home }}/.config/nvim/init.vim"
     state: link
     force: yes
-  register: vimrc
-
-- name: Install vim plugins
-  command: vim -E -s -c "source ~/.vimrc" -c PlugInstall -c qa
-  register: pluginsInstalled
-  when: vimrc.changed

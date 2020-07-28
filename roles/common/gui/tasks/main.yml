@@ -20,3 +20,9 @@
     dest: "{{dotfiles_user_home}}/.config/fontconfig/fonts.conf"
     state: link
     force: yes
+
+- name: Enable gdm
+  become: yes
+  service:
+    name: gdm
+    enabled: yes

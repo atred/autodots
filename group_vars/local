@@ -40,10 +40,9 @@ base_package_list:
 # Graphical pacman packages
 graphic_package_list:
   - gnome
-  - gtk-engine-murrine
-  - gtk-engines
   - gnome-tweaks
   - gnome-shell-extensions
+  - arc-gtk-theme
   - noto-fonts
   - nm-connection-editor
   - firefox
